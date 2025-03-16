@@ -1,40 +1,23 @@
-- pentru traseele de putere (3V3) am respectat dimensiunea de 0.3 mm, 
-  iar restul au 0.127 mm;
+for the power traces (3V3), I maintained a width of 0.3 mm, while the rest have 0.127 mm;
+!! correction: due to files not being saved properly, I had sync errors between schematics and PCB, and I had to delete the 3V3 traces and modify them with a width of 0.127 mm;
 
-!! rectificare: din cauza ca nu mi s au salvat fisierele cum trebuie, am avut erori
- de sync intre schematics si pcb, si a trebuit sa sterg traseele de 3v3 si sa le modific
- cu width 0.127 mm;
+I couldn't group the test pads in a regular shape, and the TX test pad is not in the grouping in order to connect it to the corresponding pin;
+(initially, I designed the test pad arrangement as three distinct groups, placed as strategically as possible near the pins they needed to be connected to, in order to have the most optimal traces);
 
-- test padurile nu le-am putut grupa in forma regulata, iar test pad-ul TX nu
-  se afla in grupare, pentru a-l putea lega la pinul corespunzator;
-  (initial am gandit asezarea test pad-urilor ca 3 grupari distincte,
-   amplasate cat mai strategic in apropierea de pinii la care trebuiau conectati,
-   pentru a avea trasee cat mai optime);
+the 100 nF decoupling capacitors were placed as close as possible to the power supply pins;
 
-- condensatoarele de decuplare de 100 nF au fost amplasate cat mai aproape de pinii
-  de alimentare;
+the main components were placed according to the specifications in the dimensions document, with almost negligible errors, on the order of 10^-3 mm;
 
-- componentele principale au fost amplasate conform specificatilor din documentul cu
-  dimenisuni, cu erori aproape inexistente, de ordinul 10^-3 mm;
+the ESP32 module's antenna was placed towards the outer edge of the PCB, and the PCB was cut out as precisely as possible under the antenna;
 
-- antena modulului ESP32 a fost amplasata spre exteriorul PCB-ului, iar PCB-ul a
-  fost decupat cat mai exact sub antena;
+the test pads, the SD card socket, the LCD connector, and the NOR Flash circuit were placed on the Top layer;
 
-- test pad urile, soclul pentru cardul sd, a conectorului lcd si a circuitului
-  NOR Flash au fost puse pe Top;
+the footprints for the buttons and the LCD display connector were made according to the datasheet;
 
-- footprint-urile pentru butoane si conectorul display LCD au fost realizate conform
-  datasheet-ului;
+I tried as much as possible to keep all the component groupings from the schematics together, such as the diode grouping, for example;
 
-- am incercat pe cat posibil sa pastrez toate componentele din gruparile din Schematics laolalta, 
-cum ar fi gruparea de diode de exemplu;
+I also tried to position the components as close as possible to their corresponding connections from the schematics to the PCB, such as the R1-USB resistor of the USB4110-GF-A module;
 
-- de asemenea am incercat sa pozitionez piesele cat mai aprope de corespondentul lor ca legatura
-  din Schematics in PCB, cum ar fi de exemplu rezistorul R1-USB de modului USB4110-GF-A;
+ERRORS: resistors R11 and R9 were not connected as I couldn't find a viable trace;
 
-
-- ERORI: rezistentele R11, R9 nu au fost conectate intrucat nu am putut gasi traseu 
-  viabil;
- 
-- silkscreen a fost facut pentru test pad-uri cu width de 0.4mm
-	
+silkscreen was done for the test pads with a width of 0.4 mm.
